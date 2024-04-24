@@ -9,7 +9,11 @@ module.exports = {
     ],
     theme: {
       theme: {
-        extend: {},
+        extend: {
+          screens: {
+            dark: { raw: '(prefers-color-scheme: dark)' },
+          },
+        },
       },
     },
     plugins: []

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-  </head>
-  <body>
+<html class="no-js dark" lang="{{ site.lang | default: "en-US" }}">
+
+  {% include head.html %}
+  
+  <body class="relative z-10 antialiased font-base text-gray-500 text-sm font-medium h-full bg-white dark:bg-gray-800 overflow-x-hidden dark:text-gray lg:text-base">
+  
+    {% include header.html %}
+    
     {{ content }}
+
+    </div>
   </body>
 </html>
