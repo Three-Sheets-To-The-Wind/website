@@ -1,0 +1,50 @@
+<nav class="grid grid-cols-[100px_1fr] lg:grid-cols-[21%_1fr_21%] min-h-[64px]">
+    <ul class="flex-wrap gap-3.5 lg:gap-4 xl:gap-6 self-center hidden lg:flex">
+        <li>
+            <a class="text-gray-900 transition-colors hover:text-primary dark:text-white dark:hover:text-primary"
+                href="https://www.facebook.com/3sttw/" title="Facebook"><svg class="w-3.5 xl:w-4 aspect-square"
+                    fill="currentColor">
+                    <use xlink:href="assets/img/social-icons.svg#facebook"></use>
+                </svg></a>
+        </li>
+    </ul>
+
+    <div class="grid lg:grid-cols-[1fr_110px_1fr] xl:grid-cols-[1fr_150px_1fr] items-center">
+        <!-- Navigation (Desktop) -->
+        <ul class="hidden lg:gap-x-5 xl:gap-x-8 text-gray-900 dark:text-white lg:text-sm xl:text-base font-bold uppercase tracking-tight lg:flex min-[1260px]:gap-x-10 justify-self-end">
+
+            {% for item in site.data.navbar limit:3 offset:0 %}
+            <li class="{% if page.url == item.link %} active {% endif %}">
+                <a
+                    class="relative inline-flex leading-10 transition-colors after:absolute after:bottom-[7px] after:left-0 after:h-[2px] after:transition-transform after:w-full after:origin-left after:scale-x-100 text-primary after:bg-primary"
+                    href="{{item.link}}">
+                    {{item.title}}
+                </a></li>
+            {% endfor %}
+        </ul>
+        <!-- Navigation (Desktop) / End -->
+        <!-- Logo -->
+            <div class="lg:mx-auto">
+                <a href="/">
+                    <div class="relative inline-flex aspect-square w-11 items-center justify-center overflow-hidden rounded-full bg-primary lg:w-[50px]">
+                    <img src="/assets/img/3sttw.jpeg " class="relative w-10 lg:w-[50px]" />
+                    </div>
+                </a>
+        </div>
+        <!-- Logo / End -->
+        <!-- Navigation (Desktop) -->
+        <ul class="hidden lg:gap-x-5 xl:gap-x-8 text-gray-900 dark:text-white lg:text-sm xl:text-base font-bold uppercase tracking-tight lg:flex min-[1260px]:gap-x-10">
+
+            {% for item in site.data.navbar limit:3 offset:3 %}
+            <li class="{% if page.url == item.link %} active {% endif %}">
+                <a
+                    class="relative inline-flex leading-10 transition-colors after:absolute after:bottom-[7px] after:left-0 after:h-[2px] after:transition-transform after:w-full after:origin-left after:scale-x-100 text-primary after:bg-primary"
+                    href="{{item.link}}">
+                    {{item.title}}
+                </a></li>
+            {% endfor %}
+        </ul>
+        <!-- Navigation (Desktop) / End -->
+        
+    </div>
+</nav>
