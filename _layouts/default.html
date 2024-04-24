@@ -7,8 +7,10 @@
   
     {% include header.html %}
     
-    {{ content }}
-
-    </div>
+    <main id="main-content" class="grow lg:pt-0">
+      {{ content }}
+    </main>
+    
+    {% include footer.html %}
   </body>
 </html>

@@ -1,0 +1,54 @@
+<footer id="site-footer">
+    <div class="bg-gray-50 py-12 dark:bg-gray-900 sm:py-16 md:py-20 lg:py-24 xl:py-[104px]">
+        <div class="mx-auto max-w-[1440px] px-5">
+            <div class="grid grid-cols-1 items-baseline justify-center gap-y-10 lg:grid-cols-[20%_1fr_20%]">
+                <div class="justify-self-center lg:justify-self-start">
+                    
+                </div>
+                <nav>
+                    <ul
+                        class="flex flex-wrap justify-center gap-x-4 text-base font-bold uppercase tracking-tight sm:gap-x-6 lg:gap-x-7 xl:gap-x-10">
+
+                        {% for item in site.data.navbar %}
+                        <li>
+                            <a 
+                                class="text-gray-900 transition-colors hover:text-primary dark:text-white dark:hover:text-primary" 
+                                href="{{item.link}}"
+                            >
+                                {{item.title}}
+                            </a>
+                        </li>
+                        {% endfor %}
+                        
+                    </ul>
+                </nav><!-- Social Links -->
+                <ul class="flex flex-wrap gap-6 justify-self-center lg:gap-4 lg:justify-self-end xl:gap-6">
+                    <li>
+                        <a class="text-gray-900 transition-colors hover:text-primary dark:text-white dark:hover:text-primary"
+                            href="https://www.facebook.com/3sttw/" title="Facebook"
+                        >
+                            <svg class="h-4 w-4"
+                                fill="currentColor">
+                                <use xlink:href="assets/img/social-icons.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul><!-- Social Links / End -->
+            </div>
+        </div>
+    </div>
+    <div class="bg-primary py-8">
+        <div class="mx-auto max-w-[1440px] px-5">
+            <div class="flex flex-col flex-wrap items-center justify-between gap-y-2 text-center text-sm font-bold leading-6 tracking-tight text-white md:flex-row">
+                <span class="whitespace-nowrap">All Rights Reserved 2024</span>
+                <nav>
+                    <ul
+                        class="flex flex-wrap gap-x-6 [&amp;>li:not(:first-child)]:before:absolute [&amp;>li:not(:first-child)]:before:top-1/2 [&amp;>li:not(:first-child)]:before:-left-3 [&amp;>li:not(:first-child)]:before:h-2.5 [&amp;>li:not(:first-child)]:before:w-[1px] [&amp;>li:not(:first-child)]:before:-translate-y-1/2 [&amp;>li:not(:first-child)]:before:bg-white [&amp;>li]:relative">
+                        <li><a class="vv-link-underline" href="#">Terms of Service</a></li>
+                        <li><a class="vv-link-underline" href="#">Privacy Policy</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>
