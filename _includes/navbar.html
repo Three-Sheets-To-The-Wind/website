@@ -1,3 +1,4 @@
+{%if page.header %}
 <nav class="grid grid-cols-[100px_1fr] lg:grid-cols-[21%_1fr_21%] min-h-[64px]">
     <ul class="flex-wrap gap-3.5 lg:gap-4 xl:gap-6 self-center hidden lg:flex">
         {% for item in site.data.socials %}
@@ -50,3 +51,4 @@
         
     </div>
 </nav>
+{% endif %}
