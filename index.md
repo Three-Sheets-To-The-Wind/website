@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Home"
-header: false
+header: true
 ---
 
 <div class="py-24 max-w-xl mx-auto text-center">
