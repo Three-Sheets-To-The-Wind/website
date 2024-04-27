@@ -1,12 +1,15 @@
+{%if page.header %}
 <nav class="grid grid-cols-[100px_1fr] lg:grid-cols-[21%_1fr_21%] min-h-[64px]">
     <ul class="flex-wrap gap-3.5 lg:gap-4 xl:gap-6 self-center hidden lg:flex">
+        {% for item in site.data.socials %}
         <li>
             <a class="text-gray-900 transition-colors hover:text-primary dark:text-white dark:hover:text-primary"
-                href="https://www.facebook.com/3sttw/" title="Facebook"><svg class="w-3.5 xl:w-4 aspect-square"
+                href="{{item.link}}" title="{{item.title}}"><svg class="w-3.5 xl:w-4 aspect-square"
                     fill="currentColor">
-                    <use xlink:href="assets/img/social-icons.svg#facebook"></use>
+                    <use xlink:href="{{item.icon}}"></use>
                 </svg></a>
         </li>
+        {% endfor %}
     </ul>
 
     <div class="grid lg:grid-cols-[1fr_110px_1fr] xl:grid-cols-[1fr_150px_1fr] items-center">
@@ -27,7 +30,7 @@
             <div class="lg:mx-auto">
                 <a href="/">
                     <div class="relative inline-flex aspect-square w-11 items-center justify-center overflow-hidden rounded-full bg-primary lg:w-[50px]">
-                    <img src="/assets/img/3sttw.jpeg " class="relative w-10 lg:w-[50px]" />
+                    <img src="/assets/img/logo_black.png " class="relative w-10 lg:w-[50px]" />
                     </div>
                 </a>
         </div>
@@ -48,3 +51,4 @@
         
     </div>
 </nav>
+{% endif %}

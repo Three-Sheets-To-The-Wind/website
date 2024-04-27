@@ -1,10 +1,12 @@
 ---
 layout: default
 title: "Home"
+header: true
 ---
 
 <div class="py-24 max-w-xl mx-auto text-center">
-  <h1 class="text-xl mb-12">
+  <img src="/assets/img/logo_black.png" />
+  <h1 class="text-xl mb-12 mt-5">
     <span class="uppercase font-light">
       Stay tuned there is soon more to come....
     </span>
