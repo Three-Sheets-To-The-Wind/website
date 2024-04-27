@@ -23,16 +23,18 @@
                     </ul>
                 </nav><!-- Social Links -->
                 <ul class="flex flex-wrap gap-6 justify-self-center lg:gap-4 lg:justify-self-end xl:gap-6">
+                    {% for item in site.data.socials %}
                     <li>
                         <a class="text-gray-900 transition-colors hover:text-primary dark:text-white dark:hover:text-primary"
-                            href="https://www.facebook.com/3sttw/" title="Facebook"
+                            href="{{item.link}}" title="{{item.title}}"
                         >
                             <svg class="h-4 w-4"
                                 fill="currentColor">
-                                <use xlink:href="assets/img/social-icons.svg#facebook"></use>
+                                <use xlink:href="{{item.icon}}"></use>
                             </svg>
                         </a>
                     </li>
+                    {% endfor %}
                 </ul><!-- Social Links / End -->
             </div>
         </div>
